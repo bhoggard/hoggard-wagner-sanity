@@ -1,12 +1,15 @@
-export default {
-  name: 'nationality',
-  type: 'document',
-  title: 'Nationality',
+import { defineType, defineField } from 'sanity'
+
+export const nationality = defineType({
+  title: "Nationality",
+  name: "nationality",
+  type: "document",
   fields: [
-    {
-      name: 'name',
-      type: 'string',
-      title: 'Name'
-    }
+    defineField({
+      title: "Name",
+      name: "name",
+      type: "string",
+      validation: (rule) => rule.required()
+    })
   ]
-}
+})

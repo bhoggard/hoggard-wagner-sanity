@@ -1,3 +1,4 @@
-import nationality from "./nationality"
+import { artist } from "./artist"
+import { nationality } from "./nationality"
 
-export const schemaTypes = [nationality]
+export const schemaTypes = [artist, nationality]
