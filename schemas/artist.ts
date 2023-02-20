@@ -51,13 +51,15 @@ export const artist = defineType({
     }),
     defineField({
       name: 'notes',
-      type: 'string',
-      title: 'Public notes'
+      title: 'Public notes',
+      type: 'array',
+      of: [{ type: 'block' }]
     }),
     defineField({
       name: 'privateNotes',
-      type: 'string',
-      title: 'Private notes'
+      title: 'Private notes',
+      type: 'array',
+      of: [{ type: 'block' }]
     }),
     defineField({
       name: 'email',

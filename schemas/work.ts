@@ -66,12 +66,20 @@ export const work = defineType({
     defineField({
       title: "Description",
       name: "description",
-      type: "text",
+      type: 'array',
+      of: [{ type: 'block' }]
     }),
     defineField({
       title: "Provenance",
       name: "provenance",
-      type: "text",
+      type: 'array',
+      of: [{ type: 'block' }]
+    }),
+    defineField({
+      title: 'Tags',
+      name: 'tags',
+      type: 'array',
+      of: [{ type: 'tag' }]
     }),
     defineField({
       title: "Price paid",
@@ -82,7 +90,8 @@ export const work = defineType({
     defineField({
       title: "Private Notes",
       name: "privateNotes",
-      type: "text",
+      type: 'array',
+      of: [{ type: 'block' }]
     }),
     defineField({
       title: "Location",
