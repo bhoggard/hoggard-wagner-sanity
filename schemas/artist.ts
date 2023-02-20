@@ -69,5 +69,14 @@ export const artist = defineType({
       type: 'string',
       title: 'Telephone'
     }),
+  ],
+  orderings: [
+    {
+      title: 'Sort name',
+      name: 'sortNameAsc',
+      by: [
+        { field: 'sortName', direction: 'asc' }
+      ]
+    }
   ]
 })
