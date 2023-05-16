@@ -79,7 +79,10 @@ export const work = defineType({
       title: 'Tags',
       name: 'tags',
       type: 'array',
-      of: [{ type: 'tag' }]
+      of: [{
+        type: 'reference',
+        to: { type: 'tag' }
+      }]
     }),
     defineField({
       title: "Price paid",
